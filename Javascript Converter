@@ -1,0 +1,15 @@
+const convertSentence =(sent)=>{
+    const userWord = sent;
+    const myReg = /\-/g;   //regex to find dashes
+    const newWord = [];    
+    for(let i = 0;i<userWord.length;i++){
+        if(myReg.test([userWord[i]])===false){
+            newWord.push(userWord[i])
+        }else{
+            newWord.push(" ");
+        }
+    }
+    return newWord.join("");
+}
+
+console.log(convertSentence(""));
